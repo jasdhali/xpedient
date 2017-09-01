@@ -25,21 +25,17 @@ package com.xpediantsolutions;
  *        |  B B
  *        |   B
  *        
- * Size 4:|     
- * 		  |
- * 		  |
- * 		  |B F B F B
- * 		  |
- * 		  |	
  *  Shape should be able to generate the appropriate figure for sizes 4 through N where N is a very large number.
  *
  */
 public class Main {
     public static void main(String[] args) {
+    	if(args==null||args.length==0){
+    		System.out.println("Usage >Main <N>.");
+    		System.out.println("Where N is a positive number.");
+    	}
         int size = Integer.parseInt(args[0]);
-        //Shape shape  = new ShapeImpl(size, 'B', 'F');
-        Shape shape  = new ShapeImplBkp(size, 'B', 'F');
-        //new Shape(size, 'B', 'F').draw();
+        Shape shape  = new ShapeImpl(size, 'B', 'F');
         shape.draw();
     }
 }
