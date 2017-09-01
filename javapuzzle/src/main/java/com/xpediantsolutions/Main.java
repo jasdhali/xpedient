@@ -33,6 +33,7 @@ public class Main {
     	if(args==null||args.length==0){
     		System.out.println("Usage >Main <N>.");
     		System.out.println("Where N is a positive number.");
+    		System.exit(-1);
     	}
         int size = Integer.parseInt(args[0]);
         Shape shape  = new ShapeImpl(size, 'B', 'F');
