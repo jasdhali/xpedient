@@ -28,23 +28,18 @@ public class ShapeImpl implements Shape {
 					rowNum = i;
 					posFirst = size - j;
 					posSecond = runningSize + i;
-					
 				} else if (j > runningSize) {
 					rowNum = i;
 					posFirst = runningSize + (i - 2 * runningSize);
-					//posSecond = runningSize - (i - 2 * runningSize);
-					posSecond = size - (j - 2 * runningSize);
-					
+					posSecond = size - (j - 2 * runningSize);					
 				} else if (j == runningSize) {
 					rowNum = i;
 					posFirst = size - j;
 					posSecond = size + j;
 				}
 			}
-			// System.out.println("RN->"+rowNum+"-PF->"+posFirst+"-PS->"+posSecond);
 			massageCharArray(charArr, rowNum, posFirst, posSecond, charToFill);
 		}
-		// System.out.println("##");
 	}
 
 	private void massageCharArray(char[][] charArr, int rowNum, int posFirst, int posSecond, char outChar) {
